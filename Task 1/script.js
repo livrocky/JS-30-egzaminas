@@ -23,8 +23,3 @@ formEl.addEventListener("submit", (event) => {
   gramsDisplay.textContent = `${input / 0.001} Grams`;
   ouncesDisplay.textContent = `${input * 35.274} Ounces`;
 });
-
-function myFunction() {
-  const outputEl = document.getElementById("output");
-  outputEl.classList.toggle("none");
-}
