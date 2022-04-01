@@ -8,3 +8,23 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+const inputEl = document.getElementById("search");
+const btnEl = document.getElementById("submit-btn");
+const formEl = document.querySelector("form");
+const poundsDisplay = document.getElementById("pounds");
+const gramsDisplay = document.getElementById("grams");
+const ouncesDisplay = document.getElementById("ounces");
+
+formEl.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const input = inputEl.value;
+  poundsDisplay.textContent = `${input * 2.2406} Pounds`;
+  gramsDisplay.textContent = `${input / 0.001} Grams`;
+  ouncesDisplay.textContent = `${input * 35.274} Ounces`;
+});
+
+function myFunction() {
+  const outputEl = document.getElementById("output");
+  outputEl.classList.toggle("none");
+}
