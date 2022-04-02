@@ -29,9 +29,9 @@ function renderCars(carsArr, dest) {
 function showCars(carObj) {
   const divEl = document.createElement("div");
   console.log("divEl===", divEl);
-  divEl.className = "cars-card";
+  divEl.className = "card";
   divEl.innerHTML = `
-    <h3 class="brand">${carObj.brand}</h3>
+    <h2 class="brand">${carObj.brand}</h2>
     <p class="model">${carObj.models.join(", ")}.</p>
     `;
   return divEl;
