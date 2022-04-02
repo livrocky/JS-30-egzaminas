@@ -19,7 +19,10 @@ const ouncesDisplay = document.getElementById("ounces");
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
   const input = inputEl.value;
+  console.log("input===", input);
   poundsDisplay.textContent = `${input * 2.2406} Pounds`;
   gramsDisplay.textContent = `${input / 0.001} Grams`;
   ouncesDisplay.textContent = `${input * 35.274} Ounces`;
+  const outputEl = document.getElementById("output");
+  if (input === " ") outputEl.classList.toggle("displayNone");
 });

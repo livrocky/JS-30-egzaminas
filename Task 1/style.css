@@ -83,3 +83,7 @@ h2 {
 #ounces {
   background-color: rgb(217, 83, 79);
 }
+
+.displayNone {
+  display: none;
+}
