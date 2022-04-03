@@ -21,38 +21,14 @@ const users = [
 ];
 
 //1.
-
-// forEach //
-// let total = 0;
-// users.forEach((sk) => {
-//   total = total + sk.age;
-// });
-// const userAverageAge = total / users.length;
-// console.log("userAverageAge===", userAverageAge);
-
-// Reduce//
-
-let total = 0;
 function getUserAverageAge(users) {
-  users.reduce((total, sk) => {
-    const singleNumAvg = sk.age / users.length;
-    return total + singleNumAvg;
-  }, 0);
+  return users.reduce((total, sk) => total + sk.age / users.length, 0);
 }
-const userAvgAge = getUserAverageAge(users);
-console.log("userAvgAge ===", userAvgAge);
-
-// const userAvgAge = users.reduce((total, sk) => {
-//   const singleNumAvg = sk.age / users.length;
-
-//   return total + singleNumAvg;
-// }, 0);
-// console.log("userAvgAge===", userAvgAge);
+const userAverageAge = getUserAverageAge(users);
+console.log("userAverageAge===", userAverageAge);
 
 //2.
-
 function getUsersNames(users) {
   return users.map((person) => person.name);
 }
-
 console.log(getUsersNames(users));

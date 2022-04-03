@@ -14,5 +14,5 @@ const audi = {
 function showObjectKeys(audi) {
   return Object.keys(audi);
 }
-const ObjKeys = showObjectKeys(audi);
-console.log("ObjKeys===", ObjKeys);
+const objKeys = showObjectKeys(audi);
+console.log("ObjKeys===", objKeys);
