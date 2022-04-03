@@ -9,13 +9,33 @@ atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann S
 -------------------------------------------------------------------------- */
 
 const users = [
-  { id: '1', name: 'John Smith', age: 20 },
-  { id: '2', name: 'Ann Smith', age: 24 },
-  { id: '3', name: 'Tom Jones', age: 31 },
-  { id: '4', name: 'Rose Peterson', age: 17 },
-  { id: '5', name: 'Alex John', age: 25 },
-  { id: '6', name: 'Ronald Jones', age: 63 },
-  { id: '7', name: 'Elton Smith', age: 16 },
-  { id: '8', name: 'Simon Peterson', age: 30 },
-  { id: '9', name: 'Daniel Cane', age: 51 },
+  { id: "1", name: "John Smith", age: 20 },
+  { id: "2", name: "Ann Smith", age: 24 },
+  { id: "3", name: "Tom Jones", age: 31 },
+  { id: "4", name: "Rose Peterson", age: 17 },
+  { id: "5", name: "Alex John", age: 25 },
+  { id: "6", name: "Ronald Jones", age: 63 },
+  { id: "7", name: "Elton Smith", age: 16 },
+  { id: "8", name: "Simon Peterson", age: 30 },
+  { id: "9", name: "Daniel Cane", age: 51 },
 ];
+
+console.log("users===", users);
+
+//1.
+
+// forEach //
+let total = 0;
+users.forEach((sk) => {
+  total = total + sk.age;
+});
+const userAverageAge = total / users.length;
+console.log("userAverageAge===", userAverageAge);
+
+// Reduce//
+const userAvgAge = users.reduce((total, sk) => {
+  const singleNumAvg = sk.age / users.length;
+  console.log("singleNumAvg===", singleNumAvg);
+  return total + singleNumAvg;
+}, 0);
+console.log("userAvgAge===", userAvgAge);
