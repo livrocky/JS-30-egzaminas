@@ -37,3 +37,11 @@ const userAvgAge = users.reduce((total, sk) => {
   return total + singleNumAvg;
 }, 0);
 console.log("userAvgAge===", userAvgAge);
+
+//2.
+
+function getUsersNames(users) {
+  return users.map((person) => person.name);
+}
+
+console.log(getUsersNames(users));
