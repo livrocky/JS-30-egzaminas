@@ -20,8 +20,6 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51 },
 ];
 
-console.log("users===", users);
-
 //1.
 
 // forEach //
@@ -35,7 +33,7 @@ console.log("userAverageAge===", userAverageAge);
 // Reduce//
 const userAvgAge = users.reduce((total, sk) => {
   const singleNumAvg = sk.age / users.length;
-  console.log("singleNumAvg===", singleNumAvg);
+
   return total + singleNumAvg;
 }, 0);
 console.log("userAvgAge===", userAvgAge);
