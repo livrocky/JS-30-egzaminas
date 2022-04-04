@@ -20,14 +20,16 @@ const users = [
   { id: "9", name: "Daniel Cane", age: 51, hasDog: true },
 ];
 
+//1.
 function filterDogOwners(users) {
   return users.filter((usersObj) => usersObj.hasDog === true);
 }
 const dogOwners = filterDogOwners(users);
-console.log("dogOwners===", dogOwners);
+console.log("Dog Owners===", dogOwners);
 
+//2.
 function filterAdults(users) {
   return users.filter((usersObj) => usersObj.age >= 18);
 }
 const adults = filterAdults(users);
-console.log("adults===", adults);
+console.log("Adults===", adults);
