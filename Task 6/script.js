@@ -28,8 +28,8 @@ const userAverageAge = getUserAverageAge(users);
 console.log("userAverageAge===", userAverageAge);
 
 //2.
-function getUsersName(users) {
+function getUsersNames(users) {
   return users.map((person) => person.name);
 }
-const usersNameArray = getUsersName(users);
+const usersNameArray = getUsersNames(users);
 console.log("usersNameArray===", usersNameArray);
