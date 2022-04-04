@@ -57,6 +57,7 @@
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+  justify-content: center;
 }
 
 #output {
@@ -66,15 +67,25 @@
 
 .avatar {
   width: 380px;
+  border-radius: 0.5rem;
 }
 
 .userCard {
-  margin: 1%;
+  margin: 2%;
   border: 3px solid black;
   border-radius: 0.5rem;
+  padding: 20px;
+  background-color: sandybrown;
 }
 
 .login {
   font-size: 30px;
   text-align: center;
+  font-weight: 900;
+  color: crimson;
+  padding-bottom: 20px;
+}
+
+span {
+  color: white;
 }

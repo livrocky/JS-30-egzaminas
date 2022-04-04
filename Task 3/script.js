@@ -27,8 +27,8 @@ function renderData(dataArr, dest) {
     .map(
       (dataObj) => ` 
     <div class="userCard">
-    <p class="login">Login:${dataObj.login}</p>
-    <img src="${dataObj.avatar_url}" alt="avatar-logo" class="avatar">
+    <p class="login">Login:<span> ${dataObj.login}</span></p>
+    <img src="${dataObj.avatar_url}" alt="avatar" class="avatar">
   </div>
     `
     )
