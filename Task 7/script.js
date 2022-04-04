@@ -15,4 +15,4 @@ function showObjectKeys(audi) {
   return Object.keys(audi);
 }
 const objKeys = showObjectKeys(audi);
-console.log("ObjKeys===", objKeys);
+console.log("Object Keys ===", objKeys);
