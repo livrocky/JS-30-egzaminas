@@ -87,3 +87,7 @@ h2 {
 .displayNone {
   display: none;
 }
+
+span {
+  font-size: 40px;
+}

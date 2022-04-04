@@ -12,17 +12,17 @@ Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 const inputEl = document.getElementById("search");
 const btnEl = document.getElementById("submit-btn");
 const formEl = document.querySelector("form");
-const poundsDisplay = document.getElementById("pounds");
-const gramsDisplay = document.getElementById("grams");
-const ouncesDisplay = document.getElementById("ounces");
 
 formEl.addEventListener("submit", (event) => {
   event.preventDefault();
-  const input = inputEl.value;
-  console.log("input===", input);
-  poundsDisplay.textContent = `${input * 2.2406} Pounds`;
-  gramsDisplay.textContent = `${input / 0.001} Grams`;
-  ouncesDisplay.textContent = `${input * 35.274} Ounces`;
   const outputEl = document.getElementById("output");
-  if (input === " ") outputEl.classList.toggle("displayNone");
+
+  function convertWeight() {
+    outputEl.innerHTML = `
+   <h2 id="pounds">Pounds:<span> ${inputEl.value * 2.2406} </span>lb.</h2>
+   <h2 id="grams">Grams:<span> ${inputEl.value / 0.001} </span>g.</h2>
+   <h2 id="ounces">Ounces:<span> ${inputEl.value * 35.274} </span>oz.</h2>
+   `;
+  }
+  convertWeight();
 });
