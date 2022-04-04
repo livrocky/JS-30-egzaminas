@@ -19,5 +19,5 @@ function Movie(title, director, budget) {
     }
   };
 }
-const newMovie = new Movie("seven", "Brad Pitt", 10000000000);
+const newMovie = new Movie("7even", "David Fincher", 10000000000);
 console.log(newMovie.wasExpensive());
