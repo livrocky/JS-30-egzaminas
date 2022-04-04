@@ -14,9 +14,13 @@ const ENDPOINT = "cars.json";
 const outputEl = document.getElementById("output");
 
 async function getCars() {
-  const resp = await fetch(ENDPOINT);
-  const data = await resp.json();
-  renderCars(data, outputEl);
+  try {
+    const resp = await fetch(ENDPOINT);
+    const data = await resp.json();
+    renderCars(data, outputEl);
+  } catch (error) {
+    console.log(error);
+  }
 }
 getCars();
 
@@ -28,7 +32,6 @@ function renderCars(carsArr, dest) {
 }
 function showCars(carObj) {
   const divEl = document.createElement("div");
-  console.log("divEl===", divEl);
   divEl.className = "card";
   divEl.innerHTML = `
     <h2 class="brand">${carObj.brand}</h2>
