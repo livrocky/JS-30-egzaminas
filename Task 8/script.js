@@ -6,29 +6,45 @@ multiplication() - priima du skaičius ir grąžina jų daugybos rezultatą;
 division() - priima du skaičius ir grąžina jų dalybos rezultatą;
 ------------------------------------------------------------------------------------ */
 
-function Calculator(num1, num2) {
-  this.num1 = num1;
-  this.num2 = num2;
+function Calculator() {
+  //   this.num1 = num1;
+  //   this.num2 = num2;
 
-  this.sum = function () {
+  this.sum = function (num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
     return this.num1 + this.num2;
   };
-  this.subtraction = function () {
+
+  this.subtraction = function (num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
     return this.num1 - this.num2;
   };
-  this.multiplication = function () {
+  this.multiplication = function (num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
     return this.num1 * this.num2;
   };
-  this.division = function () {
+  this.division = function (num1, num2) {
+    this.num1 = num1;
+    this.num2 = num2;
     return this.num1 / this.num2;
   };
 }
 
-const calc = new Calculator(2, 2);
-console.log("Sum===", calc.sum());
-console.log("Subtraction===", calc.subtraction());
-console.log("Multiplication===", calc.multiplication());
-console.log("Division===", calc.division());
+let calculator = new Calculator();
+// const calc = new Calculator(2, 2);
+
+console.log(calculator.sum(5, 5));
+console.log(calculator.subtraction(10, 8));
+console.log(calculator.multiplication(9, 5));
+console.log(calculator.division(20, 10));
+
+// console.log("Sum===", calc.sum());
+// console.log("Subtraction===", calc.subtraction());
+// console.log("Multiplication===", calc.multiplication());
+// console.log("Division===", calc.division());
 
 // function Calculator(num1, num2) {
 //   this.sum = function (num1, num2) {
