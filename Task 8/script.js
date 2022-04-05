@@ -32,7 +32,7 @@ function Calculator() {
 
 let calculator = new Calculator();
 
-console.log("sum===", calculator.sum(5, 5));
-console.log("subtraction===", calculator.subtraction(10, 8));
-console.log("multiplication===", calculator.multiplication(9, 5));
-console.log("division===", calculator.division(20, 10));
+console.log("Sum===", calculator.sum(5, 5));
+console.log("Subtraction===", calculator.subtraction(10, 8));
+console.log("Multiplication===", calculator.multiplication(9, 5));
+console.log("Division===", calculator.division(20, 10));
