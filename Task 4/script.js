@@ -9,4 +9,33 @@ Pastaba: Informacija apie automobilį (brand) (jo kortelė) bei turi turėti
 bent minimalų stilių;
 -------------------------------------------------------------------------- */
 
-const ENDPOINT = 'cars.json';
+const ENDPOINT = "cars.json";
+
+const outputEl = document.getElementById("output");
+
+async function getCars() {
+  try {
+    const resp = await fetch(ENDPOINT);
+    const data = await resp.json();
+    renderCars(data, outputEl);
+  } catch (error) {
+    console.log(error);
+  }
+}
+getCars();
+
+function renderCars(carsArr, dest) {
+  dest.innerHTML = "";
+  carsArr.forEach((cObj) => {
+    dest.append(showCars(cObj));
+  });
+}
+function showCars(carObj) {
+  const divEl = document.createElement("div");
+  divEl.className = "card";
+  divEl.innerHTML = `
+    <h2 class="brand">${carObj.brand}</h2>
+    <p class="model">${carObj.models.join(", ")}.</p>
+    `;
+  return divEl;
+}
